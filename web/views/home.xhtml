@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                template="../templates/eduquiztemplate.xhtml"
+                xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html">
+    
+    <ui:define name="content" >
+       <main class="mdl-layout__content background-branco marginar" >
+                    <div class="page-content ">
+                        <h1>EduQuiz</h1>
+                        <h6>O EduQuiz é uma forma simples e prática de se aplicar 
+                            provas e testes para sua turma.</h6>
+                        <h6>Quiz objetivo e com tempo para ser realizado totalmente 
+                            personalisável.</h6>
+                        <h5>Professor</h5>
+                        <h6>Realize seu cadastro totalmente gratuito para poder cadastrar sua turma, 
+                            criar Quiz e facilitar a avalivção individual e coletiva </h6>
+                        <div class="mdl-grid">
+                            <div class="mdl-cell mdl-cell--6-col">    
+                                    <h3>Quiz</h3>
+                                    <h6>Veja Quiz disponivél</h6>
+                                    <h:button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored material-icons" value="add" outcome="listaQuiz.xhtml"></h:button>
+                            </div>
+                            <div class="mdl-cell mdl-cell--6-col">    
+                                    <h3>Quiz</h3>
+                                    <h6>Resolva o Quiz</h6>
+                                    <h:button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored material-icons" value="add" outcome="responderQuiz.xhtml"></h:button>
+                            </div>
+                        </div>
+                        <div class="mdl-grid">
+                            <div class="mdl-cell mdl-cell--6-col">    
+                                    <h3>Cadastro de usuário</h3>
+                                    <h6>Realize seu cadastro gratuitamente</h6>
+                                    <h:button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored material-icons" value="add" outcome="cadastroUsuario.xhtml"></h:button>
+                            </div>
+                            <div class="mdl-cell mdl-cell--6-col">    
+                                  
+                            </div>
+                        </div>
+                    </div>
+                </main>
+    </ui:define>
+
+</ui:composition>

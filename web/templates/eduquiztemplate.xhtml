@@ -1,0 +1,182 @@
+<?xml version='1.0' encoding='UTF-8' ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+    <h:head>
+        <meta charset="UTF-8"/>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.blue-red.min.css"/>
+        <script src="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.min.js"></script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>EduQuiz</title>
+        <style>
+            .transparente{
+                background: url('../img/background2.png') center / cover;
+
+            }
+            
+            marginar{
+                margin:auto 0px;
+                padding: 100px;
+            }
+            
+            
+            a.mdl-navigation__link {
+
+                color:  rgba(0,0,0,0.87);
+                text-decoration: none;
+            }
+            a.mdl-navigation__link:hover{
+                color:  rgba(0,0,0,0.87);
+                text-decoration: none;
+            }
+
+            .mdl-grid{
+                min-height: 320px;
+                color: #757575 !important;
+            }
+            .background-branco{
+                background: #fff;
+                min-height: 50px;
+            }
+            .background-cinza{
+                background: #3C4142;
+                min-height: 50px;
+            }
+            nav.mdl-navigation .mdl-badge[data-badge]:after{
+                top: -1px;
+                right: -8px;
+            }
+            @media screen and (max-width: 470px){
+                .esconde-celular{
+                    display: none;
+                }
+                nav.mdl-navigation .mdl-badge[data-badge]:after{
+
+                    right: 5px;
+                }
+            }
+            @media screen and (min-width: 471px){
+                .mostra-celular{
+                    display: none;
+                }
+
+            }
+            .conteiner{
+                width: 350px;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 10%;
+            }
+            .verde{color: #A4C639;}
+
+        </style>
+    </h:head>
+
+    <h:body>
+
+        <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header transparente"> 
+            <header class="mdl-layout__header mdl-layout__header--transparent"> 
+                <div class="mdl-layout__header-row">
+                    <span class="mdl-layout-title">EduQuiz</span> 	
+                    <div class="mdl-layout-spacer"></div>
+                    <nav class="mdl-navigation esconde-celular">
+                        <a href="home.xhtml" class="mdl-navigation__link"><i class="material-icons right">home</i>Home</a>
+                        <a href="#" class="mdl-navigation__link">Lingua<i class="material-icons right">language</i></a>
+                        <a href="#" class="mdl-navigation__link ">Sair<i class="material-icons right">power_settings_new</i></a>
+                    </nav>
+
+                </div>
+
+            </header>
+            <div class="mdl-layout__drawer">
+                <span class="mdl-layout-title">Menu</span>
+                <nav class="mdl-navigation">
+                    <a href="./faces/views/responderQuiz.xhtml" class="mdl-navigation__link">Fazer Quiz</a>
+                    <a href="./faces/views/listaQuiz.xhtml" class="mdl-navigation__link">Lista de Quizes</a>
+                    <a href="#" class="mdl-navigation__link">Link 3</a>
+                    <a href="#" class="mdl-navigation__link">Link 4</a>
+
+                    <div class="mostra-celular">
+                        <a href="#" class="mdl-navigation__link">Home<spam class="material-icons right">home</spam></a>
+                        <a href="#" class="mdl-navigation__link">Lingua<spam class="material-icons right">language</spam></a>
+                        <a href="#" class="mdl-navigation__link ">Sair<spam class="material-icons right">power_settings_new</spam></a>
+                    </div>
+                </nav>
+            </div>
+            <div class="mdl-layout__content">
+                <main>
+
+                    <div class="mdl-grid">
+                        <div class="mdl-cell mdl-cell--2-col">
+
+                        </div>
+                        <div class="mdl-cell mdl-cell--9-col" style="padding:-50px;">
+
+                            <h:form>
+                                <ui:insert name="content">Content</ui:insert>
+                            </h:form>
+
+                        </div>
+                    </div>                           
+
+                </main>
+                <footer class="mdl-mega-footer">
+                    <div class="mdl-mega-footer__middle-section">
+
+                        <div class="mdl-mega-footer__drop-down-section">
+
+                            <h1 class="mdl-mega-footer__heading">Features</h1>
+                            <ul class="mdl-mega-footer__link-list">
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Terms</a></li>
+                                <li><a href="#">Partners</a></li>
+                                <li><a href="#">Updates</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="mdl-mega-footer__drop-down-section">
+
+                            <h1 class="mdl-mega-footer__heading">Details</h1>
+                            <ul class="mdl-mega-footer__link-list">
+                                <li><a href="#">Specs</a></li>
+                                <li><a href="#">Tools</a></li>
+                                <li><a href="#">Resources</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="mdl-mega-footer__drop-down-section">
+
+                            <h1 class="mdl-mega-footer__heading">Technology</h1>
+                            <ul class="mdl-mega-footer__link-list">
+                                <li><a href="#">How it works</a></li>
+                                <li><a href="#">Patterns</a></li>
+                                <li><a href="#">Usage</a></li>
+                                <li><a href="#">Products</a></li>
+                                <li><a href="#">Contracts</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="mdl-mega-footer__drop-down-section">
+
+                            <h1 class="mdl-mega-footer__heading">FAQ</h1>
+                            <ul class="mdl-mega-footer__link-list">
+                                <li><a href="#">Questions</a></li>
+                                <li><a href="#">Answers</a></li>
+                                <li><a href="#">Contact us</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                </footer>
+            </div>
+        </div>
+
+    </h:body>
+
+</html>

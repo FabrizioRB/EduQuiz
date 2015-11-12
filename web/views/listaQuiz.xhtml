@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns="http://www.w3.org/1999/xhtml"
+                template="./../templates/eduquiztemplate.xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:define name="content">
+        <h2>Lista de quizes</h2>
+        <div class="mdl-grid background-branco">
+
+
+            <div class="mdl-cell mdl-cell--12-col">
+                <div class="mdl-cell--top mdl-cell--hide-phone">
+                    <h4>Explicação</h4>
+                    <p>Tem que selecionar um quiz para resolver.</p>
+                    <br/>
+                </div>
+                <div class="mdl-cell--middle table-responsive">
+                    <h:dataTable value="#{quizMB.retornaListaDeQuiz()}" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" var="quiz" id="dtQuiz">
+                        <h:column>
+                            <f:facet name="header">
+                                ID
+                            </f:facet>
+                            <h:outputText value="#{quiz.idquiz}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                Estado
+                            </f:facet>
+                            <h:outputText value="#{quiz.publicar}" class="mdl-data-table__cell--non-numeric"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                Inicio do Quiz
+                            </f:facet>
+                            <h:outputText value="#{quiz.inicioQuiz}" class="mdl-data-table__cell--non-numeric"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                Final do Quiz
+                            </f:facet>
+                            <h:outputText value="#{quiz.finalQuiz}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                Selecionar
+                            </f:facet>
+                            <h:commandButton value="description" action="#{questionarioMB.carregarQuiz(quiz)}" class="mdl-button mdl-js-button mdl-button--icon material-icons"/>
+                            </h:column>
+                    </h:dataTable>                    
+                </div>
+
+            </div>
+        </div>
+    </ui:define>
+
+</ui:composition>

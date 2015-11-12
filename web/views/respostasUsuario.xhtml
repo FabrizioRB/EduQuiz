@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                template="./../templates/eduquiztemplate.xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:define name="content">
+        <div class="mdl-grid">
+            <h:dataTable var="respostas" value="#{questionarioMB.vai()}" class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+                <h:column >
+                    <f:facet name="header">
+                        Pergunta
+                    </f:facet>
+                    <h:outputText value="#{respostas.idquestionario.pergunta}"/>
+                </h:column>
+                <h:column >
+                    <f:facet name="header">
+                        Resposta
+                    </f:facet>
+                    <h:outputText value="#{respostas.resposta}"/>
+                </h:column>
+                <h:column >
+                    <f:facet name="header">
+                        Valor
+                    </f:facet>
+                    <h:outputText value="#{respostas.idquestionario.peso}"/>
+                </h:column>
+                <h:column >
+                    <f:facet name="header">
+                        Verdadeira
+                    </f:facet>
+                    <h:outputText value="#{respostas.verdadeira}"/>
+                </h:column>
+            </h:dataTable>
+        </div>
+    </ui:define>
+
+</ui:composition>
